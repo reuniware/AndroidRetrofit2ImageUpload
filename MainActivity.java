@@ -39,7 +39,7 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final int PICK_IMAGE = 1;//100;
+    public static final int PICK_IMAGE = 1;
 
     Service service;
 
@@ -96,8 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 RequestBody reqFile = RequestBody.create(MediaType.parse("image/*"), file);
                 MultipartBody.Part body = MultipartBody.Part.createFormData("upload", file.getName(), reqFile);
                 RequestBody name = RequestBody.create(MediaType.parse("text/plain"), "upload_test");
-
-//            Log.d("THIS", data.getData().getPath());
 
                 retrofit2.Call<okhttp3.ResponseBody> req = service.postImage(body, name);
                 req.enqueue(new Callback<ResponseBody>() {
