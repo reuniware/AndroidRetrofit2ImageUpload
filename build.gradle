@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "fr.a3ci.retrofittester.retrofit2tester"
+        applicationId "fr.reuniware.retrofittester.retrofit2tester"
         minSdkVersion 22
         targetSdkVersion 27
         versionCode 1
