@@ -1,4 +1,4 @@
-package fr.a3ci.retrofittester.retrofit2tester;
+package fr.reuniware.retrofittester.retrofit2tester;
 
 import android.app.Activity;
 import android.content.Intent;
