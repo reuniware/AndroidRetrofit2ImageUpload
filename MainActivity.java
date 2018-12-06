@@ -55,16 +55,12 @@ public class MainActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         // Change base URL to your upload server URL.
-        service = new Retrofit.Builder().baseUrl("http://192.168.1.102:8181").client(client).build().create(Service.class);
+        service = new Retrofit.Builder().baseUrl("http://192.168.1.200:8181").client(client).build().create(Service.class);
 
         if (btn != null) {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    /*Intent intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);*/
                     Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(galleryIntent, PICK_IMAGE);
                 }
